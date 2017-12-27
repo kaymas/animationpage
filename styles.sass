@@ -9,7 +9,7 @@ body
   margin: 0
   height: 100%
   position: relative
-  color: rgba(0,0,0,0.87)
+  color: rgba(0,0,0,0.7)
   font-family: 'Open Sans', sans-serif
   font-size: 1.6rem
 
@@ -207,3 +207,243 @@ body
       border-radius: 50%
       box-shadow: 0px 0px 15px rgba(0,0,0,0.4)
       transition: transform 300ms ease-in-out
+
+
+
+//example-3
+
+.example-3
+  background: #FCE4EC !important
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  text-align: center
+
+  .layout
+    width: 402px
+    display: flex
+    flex-wrap: wrap
+    border: 4px solid rgba(0,0,0,0.5)
+    padding: 4px
+    background: white
+
+  .header
+    width: 100%
+    height: 100px
+    background: rgba(0,0,0,0.3)
+    margin-bottom: 4px
+
+  .alert
+    width: 100%
+    background: rgba(0,0,0,0.3)
+    height: 0px
+    background: #E91E63
+    transition: height 400ms cubic-bezier(0.25, 0.39, 0.39, 2.01)
+
+    &.is-open
+      height: 100px
+      margin-bottom: 4px
+
+  .col
+    width: calc(134px - 3px)
+    height: 300px
+    background: rgba(0,0,0,0.3)
+    margin-right: 4px
+
+  .col-3
+    margin-right: 0px
+    position: relative
+
+    .btn
+      height: 50px
+      width: 100%
+      background: rgba(0,0,0,0.5)
+      line-height: 50px
+      color: rgba(255,255,255,0.7)
+      position: absolute
+      bottom: 0
+      border-top: 4px solid white
+      text-transform: uppercase
+      cursor: pointer
+      transition: all 200ms ease-in-out
+
+      &:hover
+        background: rgba(0,0,0,0.7)
+
+  .footer
+    height: 50px
+    width: 100%
+    background: rgba(0,0,0,0.3)
+    margin-top: 4px
+
+
+//example-4
+
+.example-4
+  height: 400px
+  background: #E8F5E9 !important
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .ui
+    background: rgba(0,0,0,0.3)
+    background: white
+    width: 400px
+    height: 200px
+    position: relative
+    display: flex
+    padding: 4px
+    box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.2)
+
+  .col
+    background: rgba(0,0,0,0.1)
+    margin-right: 4px
+
+  .col-1
+    width: calc(30% - 2px)
+    background: rgba(0,0,0,0.2)
+
+  .col-2
+    width: calc(70% - 2px)
+    margin-right: 0px
+
+  .highlight1,.highlight2
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    position: absolute
+    background: #8BC34A
+    animation-name: pulse
+    animation-duration: 3s
+    animation-iteration-count: infinite
+    animation-timing-function: ease-in-out
+
+  .highlight1
+    top: -8px
+    right: 20px
+
+  .highlight2
+    bottom: 20px
+    left: calc(30% - 10px)
+    animation-delay: 1s
+
+  @keyframes pulse
+    0%, 70%
+      box-shadow: 0px 0px 0px 0px rgba(139, 195, 74,0.5)
+    100%
+      box-shadow: 0px 0px 0px 50px rgba(139, 195, 74,0)
+
+
+
+//example-5
+
+.example-5
+  background: #E3F2FD !important
+  height: 400px
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+
+  .email
+    background: rgba(0,0,0,0.3)
+    background: white
+    width: 400px
+    height: 250px
+    position: relative
+    display: flex
+    padding: 4px
+    box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.2)
+    border: 4px solid white
+    transition: opacity 300ms ease-in-out
+
+    &.is-sent
+      animation-name: launch
+      animation-duration: 2s
+      animation-timing-function: ease-in-out
+
+    .masthead
+      width: 100%
+      background: rgba(0,0,0,0.2)
+      height: 80px
+
+    .send
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background: #2196F3
+      position: absolute
+      bottom: 20px
+      right: 20px
+      cursor: pointer
+      transition: all 200ms ease-in-out
+      box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.2)
+
+      &:hover
+        transform: scale(1.1)
+        box-shadow: 0px 30px 15px -15px rgba(0,0,0,0.2)
+
+@keyframes launch
+  0%
+    opacity: 1
+    transform: translateY(0px) scale(1)
+
+  10%, 20%
+    transform: translateY(20px)
+
+  40%, 70%
+    transform: translateY(-600px) scale(1)
+
+  70%
+    opacity: 1
+
+  71%
+    opacity: 0
+    transform: translateY(-600px) scale(0.6)
+
+  72%
+    opacity: 0
+    transform: translateY(0px) scale(0.6)
+
+  100%
+    opacity: 1
+    transform: translateY(0px) scale(1)
+
+
+//example-6
+
+.example-6
+  height: 400px
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #FFF3E0 !important
+
+  .progress-bar
+    width: 200px
+    height: 20px
+    background: white
+    padding: 4px
+    border: 4px solid white
+    box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.3)
+
+    .progress
+      height: 100%
+      background: #FF9800
+      animation-name: progress
+      animation-duration: 6s
+      animation-timing-function: linear
+      animation-iteration-count: infinite
+
+@keyframes progress
+  0%, 10%
+    width: 0%
+  30%
+    width: 20%
+  40%
+    width: 60%
+  70%, 90%
+    width: 80%
+  90%, 100%
+    width: 100%
